@@ -1,0 +1,68 @@
+/**
+ *
+ * Copyright (c) 2020 Alexander Bazhanov
+ * https://github.com/bazhanius/
+ *
+ */
+
+.scores-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.scores-container {
+    overflow: scroll;
+}
+
+table {
+    border: none;
+    border-collapse: collapse;
+    min-width: calc(var(--tile-width) * 4);
+    font-size: calc(var(--tile-width) * 0.3);
+    font-family: "Exo 2", sans-serif;
+    text-shadow: #fff 1px 1px;
+    color: var(--black);
+}
+
+td, th {
+    padding: 0.5em 1em;
+}
+
+th {
+    text-align: left;
+}
+
+td:nth-child(3), td:nth-child(4) {
+    text-align: right;
+    font-family: "JetBrains Mono", monospace;
+}
+
+tbody > tr:hover > td {
+    background-color: var(--gray-super-lite);
+}
+
+tbody > tr:hover > td:nth-child(4) {
+    border-radius: 0 200px 200px 0;
+}
+
+tbody > tr:hover > td:nth-child(1) {
+    border-radius: 200px 0 0 200px;
+}
+
+tr.empty-data:hover > td {
+    background-color: transparent;
+}
+.empty-data > td {
+    text-align: center;
+}
