@@ -26,7 +26,7 @@
     height: 100%;
     position: absolute;
     clip-path: circle(0% at 50% 50%);
-    background-color: var(--yellow-lite);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
     opacity: .5;
     animation-delay: 0ms;
 }

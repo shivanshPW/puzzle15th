@@ -31,17 +31,25 @@
 }
 
 body {
-    --black: #1d1d1f;
-    --yellow: #FEF102;
-    --yellow-lite: #fbf87a;
-    --blue: #06c;
-    --blue-btn: #0077ED;
-    --red: #EF1D26;
-    --white: #ece5da;
-    --gray: #24292e;
-    --gray-lite: #6a737d;
-    --gray-super-lite: #eee;
-    --green: #3bd53e;
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --primary-light: #818cf8;
+    --secondary: #ec4899;
+    --secondary-dark: #db2777;
+    --accent: #f59e0b;
+    --success: #10b981;
+    --danger: #ef4444;
+    --black: #0f172a;
+    --white: #ffffff;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e1;
+    --gray-700: #334155;
+    --gray-800: #1e293b;
+    --gray-900: #0f172a;
+    --tile-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --tile-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
     width: calc(100% - 0.5px);
     height: calc(100% - 0.5px);
     margin: 0;
@@ -49,7 +57,8 @@ body {
     font-family: "Exo 2", sans-serif;
     color: var(--black);
     box-sizing: border-box;
-    /*box-shadow: inset 0 0 var(--tile-width) calc(var(--tile-width) / 3) rgba(3, 6, 23, 0.1);*/
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden;
 }
 
 a {
@@ -79,10 +88,26 @@ canvas {
 .x-close {
     display: none;
     position: absolute;
-    top: 0;
-    left: 0;
-    margin: calc(var(--tile-width) * .45) 0;
+    top: 20px;
+    left: 20px;
+    margin: 0;
     padding: 0;
+    z-index: 100;
+}
+
+.x-close .game-menu-option {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 12px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.x-close .game-menu-option:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Not used */
