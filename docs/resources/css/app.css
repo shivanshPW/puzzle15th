@@ -18,15 +18,33 @@
     font-style: normal;
 }
 
-@media only screen and (orientation : landscape) {
+@media only screen and (max-width: 768px) {
+    body {
+        --tile-width: 18vw;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        --tile-width: 12vh;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (orientation: landscape) {
     body {
         --tile-width: 10vh;
     }
 }
 
-@media only screen and (orientation : portrait) {
+@media only screen and (min-width: 1025px) and (orientation: portrait) {
     body {
         --tile-width: 15vw;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        --tile-width: 20vw;
     }
 }
 
@@ -93,6 +111,22 @@ canvas {
     margin: 0;
     padding: 0;
     z-index: 100;
+}
+
+@media only screen and (max-width: 768px) {
+    .x-close {
+        top: 10px;
+        left: 10px;
+    }
+    
+    .x-close .game-menu-option {
+        padding: 8px 16px;
+        font-size: 11px;
+    }
+    
+    .x-close .game-menu-option__icon {
+        font-size: calc(var(--tile-width) * 0.4);
+    }
 }
 
 .x-close .game-menu-option {

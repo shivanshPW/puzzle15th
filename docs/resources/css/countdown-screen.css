@@ -35,6 +35,12 @@
     opacity: 0;
 }
 
+@media only screen and (max-width: 768px) {
+    .countdown__digit {
+        font-size: calc(var(--tile-width) * 2.5);
+    }
+}
+
 .digit__anim-fly-in {
     animation: countdown-fly-out 1s 1 ease-in;
 }

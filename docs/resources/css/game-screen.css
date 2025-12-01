@@ -41,6 +41,15 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
+@media only screen and (max-width: 768px) {
+    .game-metrics {
+        margin-top: 10px;
+        padding: 10px 15px;
+        border-radius: 15px;
+        font-size: calc(var(--tile-width) * 0.2);
+    }
+}
+
 .tiles-container {
     display: inline-block;
     width: calc(var(--tile-width) * 4);
@@ -98,6 +107,18 @@
     font-weight: 700;
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 768px) {
+    .tile {
+        border-radius: 8px;
+        font-size: calc(var(--tile-width) / 3);
+    }
+    
+    .tiles-container {
+        border-radius: 15px;
+        padding: 5px;
+    }
 }
 
 .left {

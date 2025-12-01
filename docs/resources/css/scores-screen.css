@@ -24,6 +24,17 @@
 
 .scores-container {
     overflow: scroll;
+    max-height: 70vh;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+    .scores-container {
+        max-height: 60vh;
+        padding: 0 10px;
+    }
 }
 
 table {
@@ -35,6 +46,22 @@ table {
     font-family: "Exo 2", sans-serif;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     color: white;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    table {
+        font-size: calc(var(--tile-width) * 0.25);
+        min-width: auto;
+    }
+    
+    td, th {
+        padding: 0.6em 0.8em;
+    }
+    
+    th {
+        font-size: 0.8em;
+    }
 }
 
 td, th {
