@@ -20,7 +20,7 @@
     padding: 0;
     overflow: hidden;
     perspective: 1200px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
 }
 
 .game-metrics {
@@ -124,31 +124,32 @@
 .left {
     width: calc(var(--tile-width) / 4);
     transform: translateX(calc(var(--tile-width) * -0.125)) translateZ(calc(var(--tile-width) * 0.125)) rotateY(90deg);
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #ff8787 0%, #ffa07a 100%);
 }
 
 .right {
     width: calc(var(--tile-width) / 4);
     transform: translateX(calc(var(--tile-width) * 0.875)) translateZ(calc(var(--tile-width) * 0.125)) rotateY(90deg);
-    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    background: linear-gradient(135deg, #ffa07a 0%, #ffb6a0 100%);
 }
 
 .top {
     height: calc(var(--tile-width) / 4);
     transform: translateY(calc(var(--tile-width) * -0.125)) translateZ(calc(var(--tile-width) * 0.125)) rotateX(90deg);
-    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    background: linear-gradient(135deg, #ffb6a0 0%, #ffc4b0 100%);
 }
 
 .bottom {
     height: calc(var(--tile-width) / 4);
     transform: translateY(calc(var(--tile-width) * 0.875)) translateZ(calc(var(--tile-width) * 0.125)) rotateX(90deg);
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
 }
 
 .front {
     transform: translateZ(calc(var(--tile-width) / 4));
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 50%, #ffa07a 100%);
+    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.6), inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 107, 107, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .cube {transform: translateX(5vw)}

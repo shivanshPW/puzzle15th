@@ -16,7 +16,7 @@
     width: calc(100% - 0.5px);
     height: calc(100% - 0.5px);
     border: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -131,11 +131,11 @@
 
 .check-mark-fig-1, .check-mark-fig-2 {
     fill: none;
-    stroke: #10b981;
+    stroke: #06ffa5;
     stroke-width: calc(var(--tile-width) / 2);
     stroke-linecap: round;
     stroke-linejoin: round;
-    filter: drop-shadow(0 4px 8px rgba(16, 185, 129, 0.4));
+    filter: drop-shadow(0 4px 8px rgba(6, 255, 165, 0.6)) drop-shadow(0 0 20px rgba(6, 255, 165, 0.4));
 }
 .check-mark-fig-1 {
     stroke-dasharray: 0, 2357;

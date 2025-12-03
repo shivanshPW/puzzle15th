@@ -54,53 +54,10 @@ function ready() {
 
     let results = {};
 
-    // Preview board animation
-    let previewBoard = {
-        matrix: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0],
-        emptyPos: 15,
-        animatePreview() {
-            let possibleMoves = [];
-            let emptyX = this.emptyPos % 4;
-            let emptyY = Math.floor(this.emptyPos / 4);
-            
-            // Check all adjacent positions
-            if (emptyX > 0) possibleMoves.push(this.emptyPos - 1); // left
-            if (emptyX < 3) possibleMoves.push(this.emptyPos + 1); // right
-            if (emptyY > 0) possibleMoves.push(this.emptyPos - 4); // up
-            if (emptyY < 3) possibleMoves.push(this.emptyPos + 4); // down
-            
-            // Pick random move
-            let movePos = possibleMoves[Math.floor(Math.random() * possibleMoves.length)];
-            
-            // Swap in matrix
-            this.matrix[this.emptyPos] = this.matrix[movePos];
-            this.matrix[movePos] = 0;
-            
-            // Update DOM
-            let tileNum = this.matrix[this.emptyPos];
-            if (tileNum > 0) {
-                let tiles = document.querySelectorAll('.preview-tile');
-                tiles.forEach(tile => {
-                    if (parseInt(tile.textContent) === tileNum) {
-                        let newX = this.emptyPos % 4;
-                        let newY = Math.floor(this.emptyPos / 4);
-                        tile.style.transform = `translate(calc((var(--tile-width) * 0.6 + 5px) * ${newX}), calc((var(--tile-width) * 0.6 + 5px) * ${newY}))`;
-                    }
-                });
-            }
-            
-            this.emptyPos = movePos;
-        }
-    };
-
-    let results = {};
-
     gameState = {
         interval: null,
-        previewInterval: null,
         mainMenu() {
             clearInterval(gameState.interval);
-            clearInterval(gameState.previewInterval);
             mainScreen.style.display = 'flex';
             gameScreen.style.display = 'flex';
             resultScreen.style.display = 'none';
@@ -111,13 +68,9 @@ function ready() {
             gameState.interval = setInterval(function() {
                 field.shuffle(1);
             }, 2000);
-            gameState.previewInterval = setInterval(function() {
-                previewBoard.animatePreview();
-            }, 800);
         },
         readyCheck() {
             clearInterval(gameState.interval);
-            clearInterval(gameState.previewInterval);
             mainScreen.style.display = 'none';
             countdownScreen.style.display = 'flex';
             countdownScreenDigits.forEach( (x) => {
